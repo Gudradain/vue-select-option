@@ -16,6 +16,11 @@ Vue.component('select-option', {
     ',
     props: ['value', 'options', 'first', 'config'],
     computed: {
+        /*
+        Using a computed property with getter/setter because of a bug in vue when you try to change the value and options
+        at the same time.
+        See: https://stackoverflow.com/q/49431312/3043529
+        */
         innerValue: {
             get: function() { return this.value; },
             set: function(newValue) { this.update(newValue); }
