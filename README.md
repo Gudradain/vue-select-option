@@ -1,6 +1,10 @@
 # vue-select-option
 A simple select with options and optgroups for vuejs
 
+## Demo
+
+https://jsfiddle.net/wvjy7rbx/
+
 ## Example
 
 ```html
@@ -14,10 +18,10 @@ A simple select with options and optgroups for vuejs
         data: {
             value: '',
             options: [
-                {value: '1-1', text: 'Item 1-1', group: '1'},
-                {value: '1-2', text: 'Item 1-2', group: '1'},
-                {value: '2-1', text: 'Item 2-1', group: '2'},
-                {value: '2-2', text: 'Item 2-2', group: '2'},
+                {value: '1-1', text: 'Item 1-1', group: 'Group 1'},
+                {value: '1-2', text: 'Item 1-2', group: 'Group 1'},
+                {value: '2-1', text: 'Item 2-1', group: 'Group 2'},
+                {value: '2-2', text: 'Item 2-2', group: 'Group 2'},
             ]
         }
     });
@@ -29,11 +33,11 @@ The resulting html will be
 ```html
 <div id="app">
     <select>
-        <optgroup label="1">
+        <optgroup label="Group 1">
             <option value="1-1">Item 1-1</option>
             <option value="1-2">Item 1-2</option>
         </optgroup>
-        <optgroup label="2">
+        <optgroup label="Group 2">
             <option value="2-1">Item 2-1</option>
             <option value="2-2">Item 2-2</option>
         </optgroup>
