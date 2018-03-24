@@ -44,7 +44,7 @@ The resulting html will be
 ## Motivation & Inspiration
 
 - Have a simple way to support <optgroup> in vuejs
-- Fix a "bug" in vuejs : the first value of a select is not automatically selected if the model doesn't match. The Vuejs documentation talk about it as "unselected" state https://vuejs.org/v2/guide/forms.html#Select
+- Fix a "bug" in vuejs : the first value of a select is not automatically selected if the model doesn't match any option. The Vuejs documentation talk about it as "unselected" state https://vuejs.org/v2/guide/forms.html#Select
 - Easily reused my selectList from C#. The options structure is inspired by the class SelectListItem in C#. https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.rendering.selectlistitem?view=aspnetcore-2.0
 
 ## Properties
@@ -55,7 +55,7 @@ Value binding and update
 
 ### options
 
-The options for the select. It supports a list of strings or a                    list of objects. The objects support the following properties.
+The options for the select. It supports a list of strings or                    list of objects. The objects support the following properties.
 
 | Property      | Information |
 | ------------- | ----------- |
@@ -73,7 +73,7 @@ var options = [
 ]
 ```
 
-Note: The first letters of all the properties on the objects in the option list are case insensitive. I made it that way because javascript convention is to used lowercase letters but when I received a option list from my C# server it was starting with a capital letter.
+Note: The first letter of all the properties on the objects in the option list are case insensitive. I made it that way because in javascript we use lowercase letters but when I received a option list from my C# server it was starting with a capital letter.
 
 ### first
 
@@ -93,6 +93,6 @@ Not implemented yet.
 
 ## Use at your own risk
 
-I haven't tested this library extensively and I'm unaware if there is bugs or if it works on all devices.
+I haven't tested this library extensively and I'm unaware if there are bugs or if it even works on all devices.
 
 Feel free to submit pull request or fork the project if you want to improve it.
